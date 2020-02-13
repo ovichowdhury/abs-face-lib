@@ -1,0 +1,2 @@
+// build app
+npx webpack --config webpack.config.js

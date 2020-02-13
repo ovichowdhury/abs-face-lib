@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABS ENV MOCK</title>
+</head>
+<body>
+    <h2>ABS Image Capture Mock</h2>
+    <img src="images/logo38.png" alt="image" height="250px" width="250px" id="image">
+    <button onclick="detect()">Detect</button>
+    <script src="absFaceLib.js"></script>
+    <script>
+        async function detect() {
+            console.log(await detectFace("image"));
+        }
+    </script>
+</body>
+</html>
