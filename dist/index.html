@@ -15,14 +15,16 @@
             <h2 class="text-center">ABS Face Detection & Crop</h2>
         </header>
 
-        <div class="row d-flex justify-content-center align-items-center">
-
-            <div class="col-sm-6">
-                <img src="images/samp3.jpg" alt="image" height="500px" width="500px" id="image"
-                    style="object-fit:initial;">
-            </div>
+        <div>
+            <img src="images/ovi.jpg" height="500px" width="500px" alt="input" id="input">
+            <br/> <br/>
+            <img src="" height="500px" width="500px" alt="output" id="output">
+            <br/> <br/>
             <button class="btn btn-primary" onclick="detect()">Detect</button>
+            <br/> <br/>
+            <button class="btn btn-info" onclick="crop()">Crop</button>
         </div>
+        
 
     </div>
 
@@ -31,7 +33,10 @@
     <script src="absFaceLib.js"></script>
     <script>
         async function detect() {
-            console.log(await detectFace("image"));
+            console.log(await detectFace("input"));
+        }
+        async function crop() {
+            window.cropFace("input", "input");
         }
     </script>
 </body>
