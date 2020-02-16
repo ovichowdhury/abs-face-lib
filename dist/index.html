@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/darkly/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rCA2D+D9QXuP2TomtQwd+uP50EHjpafN+wruul0sXZzX/Da7Txn4tB9aLMZV4DZm" crossorigin="anonymous">
     <title>ABS ENV MOCK</title>
 </head>
+
 <body>
-    <h2>ABS Image Capture Mock</h2>
-    <img src="images/logo38.png" alt="image" height="250px" width="250px" id="image">
-    <button onclick="detect()">Detect</button>
+    <div class="container">
+        <header>
+            <h2 class="text-center">ABS Image Capture Mock</h2>
+        </header>
+
+        <div class="row d-flex justify-content-center align-items-center">
+
+            <div class="col-sm-6">
+                <img src="images/samp1.jpg" alt="image" height="500px" width="500px" id="image">
+            </div>
+            <button class="btn btn-primary" onclick="detect()">Detect</button>
+        </div>
+
+    </div>
+
+
+
     <script src="absFaceLib.js"></script>
     <script>
         async function detect() {
@@ -16,4 +34,5 @@
         }
     </script>
 </body>
+
 </html>
