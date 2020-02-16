@@ -5,7 +5,7 @@ window.detectFace = async (inputId) => {
     await faceapi.nets.ssdMobilenetv1.loadFromUri('./models');
     let input = document.getElementById(inputId);
     const detections = await faceapi.detectAllFaces(input);
-    console.log(detections)
+    //console.log(detections)
     if (detections.length > 0) {
         if (detections.length == 1) {
             cropFace(input, detections)
@@ -38,7 +38,7 @@ window.cropFace = async (image, detections) => {
     const y_axis = detections[0].box.y - 80;
     const width = detections[0].box.width + 160;
     const height = detections[0].box.height + 150;
-    console.log("X :", x_axis, "Y :", y_axis, "Width :", width, "Height :", height)
+    //console.log("X :", x_axis, "Y :", y_axis, "Width :", width, "Height :", height)
     const destWidth = width;
     const destHeight = height;
     const destX = canvas.width / 2 - destWidth / 2;
