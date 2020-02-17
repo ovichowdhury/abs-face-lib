@@ -36,8 +36,8 @@ window.cropFace = async (inputId, outputId) => {
     const detections = await faceapi.detectAllFaces(input);
     if (detections.length > 0) {
         const canvas = document.createElement('canvas');
-        canvas.width = 700;
-        canvas.height = 550;
+        canvas.width = 350;
+        canvas.height = 350;
         const context = canvas.getContext('2d');
         const x_axis = detections[0].box.x - 80;
         const y_axis = detections[0].box.y - 80;
@@ -48,7 +48,7 @@ window.cropFace = async (inputId, outputId) => {
         // const destHeight = height;
         // const destX = canvas.width / 2 - destWidth / 2;
         // const destY = canvas.height / 2 - destHeight / 2;
-        context.drawImage(input, x_axis, y_axis, width, height, 0, 0, 350, 250)
+        context.drawImage(input, x_axis, y_axis, width, height, 0, 0, 350, 350)
         //context.drawImage(image, 0, 0, 500, 500)
 
         let imageRaw = canvas.toDataURL('image/png');
