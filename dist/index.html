@@ -38,11 +38,11 @@
     <script src="absFaceLib.js"></script>
     <script>
         async function detect() {
-            let r = await detectFace("input");
+            let r = await absFaceLib.detectFace("input");
             alert(r.message);
         }
         async function crop() {
-            window.cropFace("input", "output");
+            absFaceLib.cropFace("input", "output");
         }
     </script>
 </body>

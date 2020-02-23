@@ -1,8 +1,8 @@
 import * as faceapi from 'face-api.js';
 
 
-window.detectFace = async (inputId) => {
-    await faceapi.nets.ssdMobilenetv1.loadFromUri('./models');
+export const detectFace = async (inputId, modelPath = './models') => {
+    await faceapi.nets.ssdMobilenetv1.loadFromUri(modelPath);
     let input = document.getElementById(inputId);
     const detections = await faceapi.detectAllFaces(input);
     //console.log(detections)
@@ -29,8 +29,8 @@ window.detectFace = async (inputId) => {
     }
 }
 
-window.cropFace = async (inputId, outputId) => {
-    await faceapi.nets.ssdMobilenetv1.loadFromUri('./models');
+export const cropFace = async (inputId, outputId, modelPath = './models') => {
+    await faceapi.nets.ssdMobilenetv1.loadFromUri(modelPath);
     let input = document.getElementById(inputId);
     let output = document.getElementById(outputId);
     const detections = await faceapi.detectAllFaces(input);

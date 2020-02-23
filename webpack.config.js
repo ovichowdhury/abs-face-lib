@@ -6,7 +6,7 @@ module.exports = {
         filename: 'absFaceLib.js',
         path: path.resolve(__dirname, 'dist'),
         library: 'absFaceLib',
-        libraryTarget: 'window',
-        libraryExport: 'default'
+        // libraryTarget: 'window',
+        // libraryExport: 'default'
     },
 };
