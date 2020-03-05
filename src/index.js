@@ -1,7 +1,7 @@
 import * as faceapi from 'face-api.js';
 
 
-export const detectFace = async (inputId, modelPath = './models') => {
+export const detectFace = async (inputId, modelPath = 'https://ovichowdhury.github.io/face-api-models/') => {
     await faceapi.nets.ssdMobilenetv1.loadFromUri(modelPath);
     let input = document.getElementById(inputId);
     const detections = await faceapi.detectAllFaces(input);
@@ -29,7 +29,7 @@ export const detectFace = async (inputId, modelPath = './models') => {
     }
 }
 
-export const cropFace = async (inputId, outputId, modelPath = './models') => {
+export const cropFace = async (inputId, outputId, modelPath = 'https://ovichowdhury.github.io/face-api-models/') => {
     await faceapi.nets.ssdMobilenetv1.loadFromUri(modelPath);
     let input = document.getElementById(inputId);
     let output = document.getElementById(outputId);
